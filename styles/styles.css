@@ -1,0 +1,147 @@
+/* General Layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.app {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Timer Display */
+.timer-display {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Tree Display */
+.tree-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+}
+
+.tree-level-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.tree {
+  font-size: 6rem;
+  text-align: center;
+}
+
+/* Progress Bar */
+.progress-container {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+.progress-text {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Timer Buttons */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #76c7c0;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #5aa8a0;
+}
+
+/* Tree Count */
+.tree-count {
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #333;
+}
+
+/* Progress bar container */
+.progress-bar {
+  position: relative;
+  height: 20px;
+  background: #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Primary progress fill */
+.progress-fill {
+  position: absolute;
+  height: 100%;
+  background: #4caf50;
+  transition: width 0.2s linear;
+}
+
+/* Secondary progress bar (timer progress) */
+.progress-timer {
+  position: absolute;
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 4px;
+  transition: width 0.1s linear;
+  animation: pulse 1s infinite;
+  z-index: 1; 
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+	opacity: 0.3;
+  }
+  50% {
+	opacity: 0.7;
+  }
+  100% {
+	opacity: 0.3;
+  }
+}
+
